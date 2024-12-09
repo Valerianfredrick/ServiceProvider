@@ -68,10 +68,11 @@ class UserController {
             ];
 
             $result = $this->userModel->save($params);
+            header("location: ../LoginController/login");
 
             if ($result === true) {
                 $this->sendPasswordEmail($_POST['email'], $randomPassword, $_POST['username']);
-                echo "User created successfully. A password has been sent to the provided email.";
+                echo "User created successfully. A password has been sent to the email.";
             } else {
                 echo "Error creating user: " . $result;
             }
@@ -79,9 +80,7 @@ class UserController {
             echo "All fields (username, email, phone) are required!";
         }
     }
-    public function UserLogin(){
-        
-    }
+
     public function register() {
         require_once "../App/View/register.html";
     }
