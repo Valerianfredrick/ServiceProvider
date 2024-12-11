@@ -6,7 +6,7 @@ require_once "../App/Controllers/LoginController.php";
 require_once "../App/Controllers/HomeController.php";
 require_once "../App/Controllers/UserController.php";
 require_once "../App/Controllers/AuthController.php";
-require_once "../App/Controllers/UserDashboardController.php";
+require_once "../App/Controllers/CreateController.php";
 
 class App {
     private $controller;

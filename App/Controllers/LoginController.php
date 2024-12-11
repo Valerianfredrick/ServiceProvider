@@ -38,7 +38,7 @@ class LoginController{
 
                         $_SESSION['authUser'] = json_encode($userObject);
     
-                        header("Location: ../UserDashboardController/home");
+                        header("Location: ../CreateController/create");
                         exit();
                     } else {
                         echo "<script>alert('Invalid password, please insert the correct password')</script>";
