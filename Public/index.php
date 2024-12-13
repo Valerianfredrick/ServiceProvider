@@ -7,6 +7,7 @@ require_once "../App/Controllers/HomeController.php";
 require_once "../App/Controllers/UserController.php";
 require_once "../App/Controllers/AuthController.php";
 require_once "../App/Controllers/CreateController.php";
+require_once "../App/Controllers/ForgotPasswordController.php";
 
 class App {
     private $controller;
@@ -26,11 +27,11 @@ class App {
             $this->method = "store";
         }
 
-        // Check if controller exists
+        
         if (class_exists($this->controller)) {
             $controller = new $this->controller;
 
-            // Check if method exists
+        
             if (method_exists($controller, $this->method)) {
                 call_user_func_array([$controller, $this->method], $this->params);
             } else {
